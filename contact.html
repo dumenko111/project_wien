@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- EmailJs -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+    <title>AT-UA</title>
+    <link rel="shortcut icon" type="image/png" href="./assets/footer-lion.png" />
+  </head>
+  <body>
+    <div
+      class="navbar-fixed nav-container animate__animated animate__fadeInDown"
+    >
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo right">
+            <span class="logo-txt">
+              <img src="assets/footer-lion.png" height="80px" width="auto" />
+            </span>
+          </a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+            ><i class="material-icons nav-menu">dehaze</i></a
+          >
+          <ul class="left hide-on-med-and-down nav-links">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li><a href="services.html">Services</a></li>
+            <!-- <li><a href="process.html">Process</a></li> -->
+            <li><a href="about.html">About</a></li>
+            <li class="active"><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+      <li id="sidenav-logo">
+        <img src="assets/footer-lion.png" height="68px" width="auto" />
+      </li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <!-- <li><a href="process.html">Process</a></li> -->
+      <li><a href="about.html">About</a></li>
+      <li class="active"><a href="contact.html">Contact</a></li>
+    </ul>
+    <section class="contact-section">
+      <div class="row">
+        <div class="col s12 m12 l6 contact-desc">
+          <h1 class="animate__animated animate__fadeInDown">Contact</h1>
+          <div class="contact-map-info">
+            <div class="info animate__animated animate__fadeInLeft">
+              <i class="material-icons info-icon">email</i>
+              <span> leopolismk78@gmail.com </span>
+              <i class="material-icons info-icon">local_phone</i>
+              <span>+38 097 400 98 00</span>
+            </div>
+            <iframe
+              class="animate__animated animate__fadeInLeft"
+              src="https://www.google.com/maps/place/Wichtelgasse+66,+1170+Wien,+%D0%90%D0%B2%D1%81%D1%82%D1%80%D1%96%D1%8F/@48.2174409,16.3213891,17z/data=!4m2!3m1!1s0x476d080b338c74bd:0x8dbd94b639e700e4"
+              width="90%"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+        <div class="col s12 m12 l6 form-section">
+          <p id="err" class="form-err">You missed a mandatory field</p>
+          <form class="row animate__animated animate__fadeInRight">
+            <div class="input-field col s12">
+              <input
+                id="full_name"
+                type="text"
+                placeholder=""
+                class="validate"
+              />
+              <label for="Full_name">Full Name</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="email" type="email" placeholder="" class="validate" />
+              <label for="email">Email</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="phone" type="text" placeholder="" class="validate" />
+              <label for="phone">Phone</label>
+            </div>
+            <div class="input-field col s12">
+              <select multiple id="role">
+                <option value="" disabled selected></option>
+                <option value="Business Owner">Business Owner</option>
+                <option value="Dental Assisstant">Dental Assisstant</option>
+                <option value="Dental Hygenist">Dental Hygenist</option>
+                <option value="Other">Other</option>
+              </select>
+              <label class="form-select-label">I am a </label>
+            </div>
+            <div class="input-field col s12">
+              <textarea
+                id="message"
+                class="materialize-textarea"
+                data-length="450"
+                placeholder=""
+              ></textarea>
+              <label for="message">Message</label>
+            </div>
+
+            <button
+              id="submit"
+              class="btn waves-effect waves-light form-btn"
+              name="action"
+            >
+              Submit
+              <i class="material-icons right">send</i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="page-footer">
+      <div class="row footer-content">
+        <div class="col s12 l6 footer-content-left">
+          <img class="footer-logo" src="assets/footer-lion.png" height="200px" width="auto" />
+          <div class="footer-contact">
+            <h3>Наші контакти</h3>
+            <p>097-400-98-00</p>
+            <p>europalvivua@gmail.com</p>
+          </div>
+        </div>
+        <div class="col s12 l6 footer-content-right">
+          <ul class="footer-links">
+            <li class="active"><a href="./index.html">ГОЛОВНА</a></li>
+            <li><a href="./services.html">РОЗКЛАД</a></li>
+            <li><a href="./about.html">ПРО НАС</a></li>
+            <li><a href="./contact.html">КОНТАКТИ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <!-- <div class="copyright">© 2021 Copyright KT Staffing Solutions</div> -->
+      </div>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/contact.js"></script>
+  </body>
+</html>

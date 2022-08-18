@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- EmailJs -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/services.css" />
+    <title>AT-UA</title>
+    <link rel="shortcut icon" type="image/png" href="./assets/footer-lion.png" />
+  </head>
+  <body>
+    <div
+      class="navbar-fixed nav-container animate__animated animate__fadeInDown"
+    >
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo right">
+            <span class="logo-txt"
+              >
+              <img src="assets/footer-lion.png" height="80px" width="auto" />
+              </span
+            >
+          </a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+            ><i class="material-icons nav-menu">dehaze</i></a
+          >
+          <ul class="left hide-on-med-and-down nav-links">
+            <li>
+              <a href="index.html">ГОЛОВНА</a>
+            </li>
+            <li class="active"><a href="services.html">РОЗКЛАД</a></li>
+            <!-- <li><a href="process.html">Process</a></li> -->
+            <li><a href="about.html">ПРО НАС</a></li>
+            <li><a href="contact.html">КОНТАКТИ</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+      <li id="sidenav-logo">
+        <img src="assets/footer-lion.png" height="68px" width="auto" />
+      </li>
+      <li><a href="index.html">ГОЛОВНА</a></li>
+      <li class="active"><a href="services.html">РОЗКЛАД</a></li>
+      <!-- <li><a href="process.html">Process</a></li> -->
+      <li><a href="about.html">ПРО НАС</a></li>
+      <li><a href="contact.html">КОНТАКТИ</a></li>
+    </ul>
+    </div>
+    <div id="modal1" class="modal">
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat"
+          >Close</a
+        >
+      </div>
+      <div class="modal-content">
+        <h3>Apply To Hire Dental Help</h3>
+          <form class="row modal-form">
+            <p id="err" class="form-err">You missed a mandatory field</p>
+            <div class="input-field col s12">
+              <input id="business_name" type="text" placeholder="" class="validate" />
+              <label for="business_name">Name of Dental Practice*</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="contact_name" type="text" placeholder="" class="validate" />
+              <label for="contact_name">Name of Contact*</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="contact_email" type="email" placeholder="" class="validate" />
+              <label for="contact_email">Email*</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="contact_phone" type="tel" placeholder="" class="validate" />
+              <label for="contact_phone">Phone*</label>
+            </div>
+            <div class="input-field col s12">
+              <label for="date">Preferred starting date</label>
+              <input id="date" type="date" value="" placeholder=""/>
+          </div>
+          <div class="input-field col s12">
+            <select id="hours" class="browser-default">
+              <option value="" disabled selected>How many hours are you looking to fill ?</option>
+              <option value="1 - 15 (hrs/week)">1 - 15 (hrs/week)</option>
+              <option value="15 - 25 (hrs/week)">15 - 25 (hrs/week)</option>
+              <option value="25 - 35 (hrs/week)">25 - 35 (hrs/week)</option>
+              <option value="35+ (hrs/week)">35+ (hrs/week)</option>
+            </select>
+          </div>
+
+            <div class="col s12 form-radio">
+              <label>
+                <input id="full" name="group1" type="radio" value="full-time"/>
+                <span>Full-Time</span>
+              </label>
+              <label>
+                <input id="part" name="group1" type="radio" value="part-time"/>
+                <span>Part-Time</span>
+              </label>
+              <label>
+                <input id="both" name="group1" type="radio" value="both"/>
+                <span>Both</span>
+              </label>
+            </div>
+
+            <div class="col s12 flex-c-center">
+              <button
+              id="submit-form"
+              class="btn waves-effect waves-light form-btn"
+            >
+              Submit
+              <i class="material-icons right">send</i>
+            </button>
+            </div>
+          </form>
+      </div>
+      </div>
+
+    </div>
+    <section class="service-header animate__animated animate__fadeInDown">
+      <span
+      id="serv-title-lg"
+      class="services-title animate__animated"
+      ><span id="brand-span">Львів - Відень - Львів</span></span>
+      <h3>міжнародні вантажо-пасажирські перевезення</h3>
+    </section>
+    <section class="services-section">
+        <div id="hygenist" class="col s12 m6 l6 flex-c-center hygenist animate__animated animate__fadeInUp">
+          <div class="lens-dark">
+           <a href="./contact.html" class="services-section-title-1 modal-trigger">Пасажирські перевезення</a>
+          </div>
+        </div>
+         <div id="assisstant" class="col s12 m6 l6 flex-c-center assisstant animate__animated animate__fadeInUp">
+           <div class="lens-light">
+            <a href="./contact.html" class="services-section-title-2 modal-trigger">Перевезення посилок</a>
+           </div>
+         </div>
+    </section>
+    <section class="services-section">
+      <img src="" alt="">
+      <!-- <div class="row">
+        <div class="col s12 m12 l6 animate__animated animate__fadeInDown">
+          <p class="services-paragraph"><span>Dental hygienists</span> are <i>licensed health professionals</i> who provide <strong>preventive dental care</strong> , perform <strong>oral health assessment</strong>s and <strong>teeth cleanings</strong>, apply  <strong>cavity preventive agents</strong> to teeth, take and develop <strong>x-rays</strong>, and <strong>educate</strong> patients on proper oral hygiene techniques. Under dentists supervision, dental hygienists in New York are <i>permitted to administer and monitor local infiltration anesthesia and nitrous oxide.</i></p>
+        </div>
+        <div class="col s12 m12 l6 animate__animated animate__fadeInDown">
+          <p class="services-paragraph"><span>Dental assistants</span> perform a wide array of clinical and administrative duties under the supervision of a dentist. They <i>assist the dentist during dental examinations and treatments</i>, such as <strong>preparing the patient</strong>, <strong>taking x-rays</strong>, <strong>sterilizing instruments</strong>, <strong>assisting with instruments and materials</strong>, and instructing patients about general and <strong>post-operative oral health care</strong>.
+            In New York, dental assistants who are not certified may be hired into an entry level dental assistant position and receive on-the-job training.
+            </p>
+        </div>
+      </div> -->
+    </section>
+    <section class="process-body row">
+      <div class="col s12 paralax-col">
+        <div class="parallax ">
+          <div class="serv-cities-container flex-c-center">
+            <!-- <h1 class="serv-cities animate__animated">
+              Now Serving the Areas of
+            </h1> -->
+            <h1 class="serv-cities-list animate__animated">
+              ВІДЕНСЬКИЙ ПЕРЕВІЗНИК
+            </h1>
+          </div>
+        </div>
+      </div>
+        <div class="col s12 m12 l6 process-blog">
+          <div id="service-text-1" class="animate__animated">
+            <h5>Оксана 35р.</h5>
+            <p class="flow-text">
+              Я така довольна шото капец) водії ого го го
+            </p>
+            <span class="flex-c-center">
+              <img src="assets/handshake.png" height="126px" width="126px" />
+            </span>
+          </div>
+        </div>
+        <div class="col s12 m12 l6 process-blog">
+          <div id="service-text-2" class="animate__animated">
+            <h5>Степанко 40р.</h5>
+            <p class="flow-text">
+              В жизні так комфортно не їздив. Спав як в рідному ліжку
+            </p>
+            <span class="flex-c-center">
+              <img src="assets/user.png" height="126px" width="126px" />
+            </span>
+          </div>
+        </div>
+    </section>
+    <footer class="page-footer">
+      <div class="row footer-content">
+        <div class="col s12 l6 footer-content-left">
+          <img class="footer-logo" src="assets/footer-lion.png" height="200px" width="auto" />
+          <div class="footer-contact">
+            <h3>Наші контакти</h3>
+            <p>097-400-98-00</p>
+            <p>europalvivua@gmail.com</p>
+          </div>
+        </div>
+        <div class="col s12 l6 footer-content-right">
+          <ul class="footer-links">
+            <li class="active"><a href="./index.html">ГОЛОВНА</a></li>
+            <li><a href="./services.html">РОЗКЛАД</a></li>
+            <li><a href="./about.html">ПРО НАС</a></li>
+            <li><a href="./contact.html">КОНТАКТИ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <!-- <div class="copyright">© 2021 Copyright KT Staffing Solutions</div> -->
+      </div>
+    </footer>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/services.js"></script>
+  </body>
+</html>
